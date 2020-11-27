@@ -1,0 +1,100 @@
+.root {
+  display: flex;
+  justify-content: center;
+}
+.folder-structure {
+  max-width: 400px;
+  width: 100%;
+  margin: 30px;
+  padding-right: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 3px;
+}
+.list-option {
+  position: relative;
+  width: 100%;
+  list-style: none;
+}
+.option-name {
+  position: absolute;
+  padding: 2px 0 0 30px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.option-name:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: 24px;
+  border-radius: 5px;
+  background-color: rgba(163, 217, 253, 0.3);
+  z-index: -1;
+}
+.focused-option {
+  border-radius: 5px;
+  background-color: rgba(72, 158, 216, 0.5);
+  z-index: -1;
+} 
+.yellow {
+  color: rgb(237, 188, 11);
+}
+.gray {
+  color: rgb(176, 176, 176);
+}
+.empty-folder {
+  font-style: italic;
+}
+.right-menu {
+  display: none;
+  position: absolute;
+  width: 100px;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+  background-color: rgb(256, 256, 256);
+  z-index: 10;
+}
+.right-menu-options {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.right-menu-option {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: 7px 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.right-menu-option:hover {
+  background-color: rgba(163, 217, 253, 0.4);
+}
+.right-menu-option:active {
+  background-color: transparent;
+  color: rgb(95, 95, 95);
+}
+.rename-input {
+  background-color: transparent;
+  font-size: 0.9rem;
+}
+.right-menu-option:active,
+.rename-input:focus {
+  border: 3px solid black;
+  border-radius: 5px;
+  outline: none;
+}
